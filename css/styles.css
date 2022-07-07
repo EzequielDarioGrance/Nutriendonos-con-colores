@@ -1,0 +1,197 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: paleturquoise;
+}
+
+p{
+    padding: 0 16px;
+}
+
+header {
+    background-color: white;
+    position: sticky;
+    top: 0px;
+}
+
+.header__logo{
+    display: inline;
+    width: 100px;
+}
+
+.header__lista{
+    display: inline;
+    margin: 16px;
+    list-style: none;
+}
+
+.header__opciones{
+    padding: 85px;
+    display: inline;
+}
+.header__opciones a {
+    color: black;
+    text-decoration: solid;
+}
+
+.portada {
+    text-align: center;
+    padding: 50px;
+    border: 1px solid grey;
+}
+
+.portada__titulo {
+    color: plum;
+    padding: 16px;
+}
+
+.portada__imagen {
+    background-position: center;
+    width: 100vh;
+}
+
+.comidas{
+    background-image: url(../resources/avocado.jpg);
+    text-align: center;
+    padding: 50px;
+    border: 1px solid grey;
+}
+
+.comidas__titulo {
+    padding: 16px;
+    color: blue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.comidas__imagen{
+    width: 300px;
+    height: 300px;
+    padding: 50px;
+}
+
+.tips {
+    padding: 50px;
+    border: 1px solid grey;
+}
+
+.tips__titulo {
+    text-align: center;
+    padding: 15px;
+    color: blue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.video {
+    align-items: center;
+    padding: 50px;
+}
+
+span {
+    background-color: aquamarine;
+}
+
+.img-small {
+    width: 300px;
+    height: 500px;
+}
+.footer__redes {
+    width: 25px;
+    height: 25px;
+}
+
+
+/* RECOMENDACIONES */
+.contenedor{
+    display: flex;/*  */
+    justify-content: center;/* alineacion bcentral de las tarjetas */
+    flex-wrap: wrap;/* cuando los elementos chocan, se van acomodando para abajo */
+}
+
+h1{
+    width: 100%;
+    text-align: center;
+    margin-bottom: auto;
+}
+
+.tarjeta{
+    width: 350px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    border: 1px solid grey;
+}
+.tarjeta__imagen {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.tarjeta__info {
+    width: 90%;
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+button{
+    background-color: rgb(233, 131, 187);
+    padding: 15px;
+}
+
+
+
+/* GALERIA */
+.galeria {
+    width: 200px;
+    display: flex;
+    flex-grow: 0;
+    
+}
+
+.galeria__imagen {
+    width: 300px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.galeria__imagen hover {
+    height: 300px;
+    flex-grow: 5;
+}
+
+.recetas__grid{
+    display: grid;
+    width: 50%;
+    height: 50%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:"partida rellena ensalada"
+                        "partida avocado ensalada"
+                        "connueces frutas palta";
+    column-gap: 15px;
+}
+
+.partida{
+    grid-area: partida;
+    background-image: url(../resources/paltapartida.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* media querie de CELULAR */
+@media (min-width: 320px) and (max-width: 757px) {
+
+}
+
+/* media querie de tablet */
+@media (min-width: 576px) and (max-width: 992px){
+
+}
+
