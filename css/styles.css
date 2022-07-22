@@ -336,5 +336,25 @@ button{
         flex-direction: column;       
     
     }
+}
 
+/* CONTACTO */
+
+/* section */
+
+.img-fluid {
+    width: 100%;
+}
+.d-block {
+    width: 100%;
+    object-fit: cover;
+    height: 500px;
+}
+
+.modulo {
+    padding: 50px;
+}
+.modulo__lista {
+    width: 30%;
+    height: 30%;
 }
