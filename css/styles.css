@@ -12,6 +12,12 @@ p{
     padding: 0 16px;
 }
 
+p::first-letter {
+    color: black;
+    font-weight: 900;
+    font-size: 200%;
+}
+
 header {
     background-color: white;
     position: sticky;
@@ -33,27 +39,56 @@ nav {
     width: 100px;
 }
 
-.header__lista{
+.header__lista:visited {
     display: inline;
     margin: 16px;
     list-style: none;
 }
 
-.header__opciones{
+.header__opciones {
     padding: 50px;
     display: inline;
     text-decoration: none;
     color: #000;
-    transition: .3s;
+    transform: scale(1, 1);
+    transition: all 0.3s;
     font-weight: bold;
     font-size: 24px;
     font-family: 'Inconsolata', monospace;
-    
+}
+
+.header__opciones::after {
+    content: "";
+    display: inline;
+    width: 0px;
+    height: 10px;
+}
+
+.header__opciones::before {
+    content: "";
+    display: inline;
+    width: 0px;
+    height: 10px;
+
+}
+
+
+a:hover {
+    background-color: rgb(224, 174, 183);
+    color: white;
 }
 
 .header__opciones a {
     color: black;
     text-decoration: solid;
+}
+
+.titulo__4comidas {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: auto;
+    color: coral;
 }
 
 .portada {
@@ -358,3 +393,5 @@ button{
     width: 30%;
     height: 30%;
 }
+
+

@@ -1,0 +1,23 @@
+{
+  "name": "29295",
+  "version": "1.0.0",
+  "description": "<h1>Nutrienndonos con colores</h1>\r <p>Este sitio esta dirigido a aquellas personas que quieran comer saludable</p>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EzequielDarioGrance/Nutriendonos-con-colores.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EzequielDarioGrance/Nutriendonos-con-colores/issues"
+  },
+  "homepage": "https://github.com/EzequielDarioGrance/Nutriendonos-con-colores#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.19"
+  }
+}
