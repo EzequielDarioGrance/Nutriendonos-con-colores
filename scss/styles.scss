@@ -1,0 +1,268 @@
+@import "variables";
+@import "comidas";
+@import "galeria";
+@import "header";
+@import "mediaqueriers";
+@import "portada";
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(132, 182, 119, 0.678);
+}
+
+p{
+    padding: 0 16px;
+}
+
+p::first-letter {
+    color: black;
+    font-weight: 900;
+    font-size: 200%;
+}
+
+header {
+    background-color: white;
+    position: sticky;
+    top: 0px;
+    }  
+
+.header__logo{
+    display: inline;
+    width: 100px;
+}
+
+.header__lista:visited {
+    display: inline;
+    margin: 16px;
+    list-style: none;
+}
+
+.header__opciones {
+    padding: 50px;
+    display: inline;
+    text-decoration: none;
+    color: #000;
+    transform: scale(1, 1);
+    transition: all 0.3s;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: 'Inconsolata', monospace;
+}
+
+.header__opciones::after {
+    content: "";
+    display: inline;
+    width: 0px;
+    height: 10px;
+        }
+
+.header__opciones::before {
+    content: "";
+    display: inline;
+    width: 0px;
+    height: 10px;
+}        
+
+
+.header__opciones a {
+    color: $color-titulos;
+    text-decoration: solid;
+}
+
+.text-center {
+    color: $color-titulos;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10px;
+    height: 100px;
+}
+
+
+
+
+a:hover {
+    background-color: black;
+    color: white;
+}
+
+
+
+.titulo__4comidas {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: auto;
+    color: $color-titulos;
+}
+
+
+.tarjeta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    & img {
+        width: 50%;
+        object-fit: cover;
+    }
+    
+    &__info {
+        padding: 30px;
+        margin: 30px;
+    }
+}
+
+
+.desayuno {
+    grid-area: desayuno;
+}
+
+.almuerzo {
+    grid-area: almuerzo;
+}
+
+.merienda {
+    grid-area: merienda;
+}
+
+.cena {
+    grid-area: cena;
+}
+
+
+
+.tips {
+    padding: 50px;
+    border: 1px solid grey;
+
+    &__titulo {
+        text-align: center;
+        padding: 15px;
+        color: blue;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+}
+
+
+
+.video {
+    align-items: center;
+    padding: 50px;
+}
+
+span {
+    background-color: aquamarine;
+}
+
+.img-small {
+    width: 300px;
+    height: 500px;
+}
+.footer__redes {
+    width: 25px;
+    height: 25px;
+}
+
+
+/* RECOMENDACIONES */
+
+.contenedor {
+    display: flex;/*  */
+    justify-content: center;/* alineacion bcentral de las tarjetas */
+    flex-wrap: wrap;/* cuando los elementos chocan, se van acomodando para abajo */
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: auto;
+    color: $color-titulos;
+}
+
+.tarjeta{
+    width: 350px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    border: 1px solid grey;
+
+    &__imagen {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 20px;
+    }
+    
+    &__info {
+        width: 90%;
+        text-align: center;
+        margin-bottom: 20px;
+        line-height: 1.5;
+    }
+}
+
+
+button{
+    background-color: black;
+    padding: 15px;
+}
+
+
+.recetas__grid{
+    display: grid;
+    width: 50%;
+    height: 50%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:"partida rellena ensalada"
+                        "partida avocado ensalada"
+                        "connueces frutas palta";
+    column-gap: 15px;
+}
+
+.partida{
+    grid-area: auto;
+    background-image: url(../resources/paltapartida.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+
+/* CONTACTO */
+
+/* section */
+
+.img-fluid {
+    width: 100%;
+}
+.d-block {
+    width: 100%;
+    object-fit: cover;
+    height: 500px;
+}
+
+.modulo {
+    padding: 50px;
+}
+.modulo__lista {
+    width: 30%;
+    height: 30%;
+}
+

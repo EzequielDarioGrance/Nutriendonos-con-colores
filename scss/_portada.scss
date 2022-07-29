@@ -1,0 +1,31 @@
+.portada {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.905)), url(../resources/ensalada.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 100%;
+    min-height: 100vh;
+    max-height: 100%;
+    padding: 30px;
+
+    &__titulo {
+        color: rgb(255, 254, 253);
+        font-size: 50px;
+        font-weight: bold;
+        font-family: 'Inconsolata', monospace;
+        padding: 16px;
+    }
+    
+    &__imagen {
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        width: 100%;
+        min-height: 100%;
+        max-height: 100%;
+    }
+}

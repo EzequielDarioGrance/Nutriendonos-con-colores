@@ -1,0 +1,62 @@
+@media only screen and (min-width:900px) and (max-width:1024px){
+
+    .comidas {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 'desayuno almuerzo cena'
+                            'desayuno merienda cena';
+        background-color: white;
+        gap: 5px;
+        padding: 5px;
+    }
+}
+
+@media only screen and (min-width:480px) and (max-width:899px){
+
+
+    .tarjeta__info {
+        flex-direction: column;      
+    }
+    .tarjeta__imagen img {
+        width: 100%;
+        object-fit: cover;
+    }
+    .comidas {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 'desayuno almuerzo'
+                        'desayuno almuerzo '
+                        'merienda cena'
+                        'merienda cena';
+    }
+}
+
+@media only screen and (min-width:300px) and (max-width:479px){
+
+    nav {
+        flex-direction: column;
+        height: 100%;
+    }
+    
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        padding: 25px;
+    }
+    .tarjeta__info {
+        flex-direction: column;      
+    }
+    .tarjeta__imagen img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .comidas {
+        display: flex;
+        flex-direction: column;       
+    
+    }
+}
