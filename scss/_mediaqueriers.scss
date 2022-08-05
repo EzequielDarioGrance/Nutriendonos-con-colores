@@ -1,5 +1,14 @@
 @media only screen and (min-width:900px) and (max-width:1024px){
 
+    .header__opciones {
+        height: auto;
+    }
+
+    nav {
+        flex-direction: column;
+        height: auto;
+    }
+
     .comidas {
         width: 100%;
         display: grid;
@@ -15,6 +24,14 @@
 
 @media only screen and (min-width:480px) and (max-width:899px){
 
+    .header__opciones {
+        height: auto;
+    }
+
+    nav {
+        flex-direction: column;
+        height: auto;
+    }
 
     .tarjeta__info {
         flex-direction: column;      
@@ -35,9 +52,10 @@
 
 @media only screen and (min-width:300px) and (max-width:479px){
 
+
     nav {
         flex-direction: column;
-        height: 100%;
+        height: auto;
     }
     
     nav ul {

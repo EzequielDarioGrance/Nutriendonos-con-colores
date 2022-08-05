@@ -1,18 +1,51 @@
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box; }
+@charset "UTF-8";
+/* colores */
+/* CONDICIONAL IF*/
+/* MAP = coleccion de variables (CLAVE-VALOR) */
+tamaño-h1 {
+  font-size: 3rem; }
 
-body {
-  background-color: rgba(132, 182, 119, 0.678); }
+tamaño-h2 {
+  font-size: 2rem; }
 
-p {
-  padding: 0 16px; }
+tamaño-h3 {
+  font-size: 1rem; }
 
-p::first-letter {
-  color: black;
-  font-weight: 900;
-  font-size: 200%; }
+.comidas {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: 'desayuno almuerzo almuerzo cena' 'desayuno merienda merienda cena';
+  background-color: white;
+  gap: 5px;
+  padding: 5px; }
+  .comidas__imagen {
+    background-color: #ffff;
+    border-radius: 3px;
+    height: 100%; }
+    .comidas__imagen img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: .3s;
+      filter: grayscale(100%); }
+      .comidas__imagen img img:hover {
+        filter: grayscale(0);
+        clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%); }
+
+/* GALERIA */
+.galeria {
+  width: 200px;
+  display: flex;
+  flex-grow: 0; }
+  .galeria__imagen {
+    width: 300px;
+    justify-content: center;
+    padding: 20px; }
+    .galeria__imagen:hover {
+      height: 300px;
+      flex-grow: 5; }
 
 header {
   background-color: white;
@@ -23,7 +56,7 @@ header {
   display: inline;
   width: 100px; }
 
-.header__lista:visited {
+.header__lista {
   display: inline;
   margin: 16px;
   list-style: none; }
@@ -32,7 +65,7 @@ header {
   padding: 50px;
   display: inline;
   text-decoration: none;
-  color: #000;
+  color: #e98484;
   transform: scale(1, 1);
   transition: all 0.3s;
   font-weight: bold;
@@ -51,29 +84,58 @@ header {
   width: 0px;
   height: 10px; }
 
-nav {
-  display: flex;
-  width: 100%;
-  background-color: white;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 10px;
-  height: 100px; }
-
-a:hover {
-  background-color: #e0aeb7;
-  color: white; }
-
 .header__opciones a {
-  color: black;
+  color: coral;
   text-decoration: solid; }
 
-.titulo__4comidas {
-  width: 100%;
-  text-align: center;
-  padding: 20px;
-  margin-bottom: auto;
-  color: coral; }
+@media only screen and (min-width: 900px) and (max-width: 1024px) {
+  .header__opciones {
+    height: auto; }
+  nav {
+    flex-direction: column;
+    height: auto; }
+  .comidas {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 'desayuno almuerzo cena' 'desayuno merienda cena';
+    background-color: white;
+    gap: 5px;
+    padding: 5px; } }
+
+@media only screen and (min-width: 480px) and (max-width: 899px) {
+  .header__opciones {
+    height: auto; }
+  nav {
+    flex-direction: column;
+    height: auto; }
+  .tarjeta__info {
+    flex-direction: column; }
+  .tarjeta__imagen img {
+    width: 100%;
+    object-fit: cover; }
+  .comidas {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 'desayuno almuerzo' 'desayuno almuerzo ' 'merienda cena' 'merienda cena'; } }
+
+@media only screen and (min-width: 300px) and (max-width: 479px) {
+  nav {
+    flex-direction: column;
+    height: auto; }
+  nav ul {
+    flex-direction: column; }
+  nav ul li {
+    padding: 25px; }
+  .tarjeta__info {
+    flex-direction: column; }
+  .tarjeta__imagen img {
+    width: 100%;
+    object-fit: cover; }
+  .comidas {
+    display: flex;
+    flex-direction: column; } }
 
 .portada {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.905)), url(../resources/ensalada.jpg);
@@ -102,6 +164,45 @@ a:hover {
     min-height: 100%;
     max-height: 100%; }
 
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
+
+body {
+  background-color: rgba(132, 182, 119, 0.678); }
+
+p {
+  padding: 0 16px; }
+
+p::first-letter {
+  color: black;
+  font-weight: 900;
+  font-size: 200%; }
+
+.text-center {
+  color: coral; }
+
+nav {
+  display: flex;
+  width: 100%;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10px;
+  height: 100px; }
+
+a:hover {
+  background-color: #e98484;
+  color: white; }
+
+.titulo__4comidas {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: auto;
+  color: coral; }
+
 .tarjeta {
   display: flex;
   justify-content: center;
@@ -113,37 +214,6 @@ a:hover {
   .tarjeta__info {
     padding: 30px;
     margin: 30px; }
-
-.comidas {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto;
-  grid-template-areas: 'desayuno almuerzo almuerzo cena'
- 'desayuno merienda merienda cena';
-  background-color: white;
-  gap: 5px;
-  padding: 5px;
-  /* .comidas__titulo h2 {
-    text-align: center;
-    color: rgb(18, 156, 236);
-    font-size: 30px;
-    font-weight: bold;
-    font-family: 'Inconsolata', monospace;
-} */ }
-  .comidas__imagen {
-    background-color: #ffff;
-    border-radius: 3px;
-    height: 100%; }
-    .comidas__imagen img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: .3s;
-      filter: grayscale(100%); }
-      .comidas__imagen img img:hover {
-        filter: grayscale(0);
-        clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%); }
 
 .desayuno {
   grid-area: desayuno; }
@@ -193,7 +263,8 @@ span {
 h1 {
   width: 100%;
   text-align: center;
-  margin-bottom: auto; }
+  margin-bottom: auto;
+  color: coral; }
 
 .tarjeta {
   width: 350px;
@@ -214,21 +285,8 @@ h1 {
     line-height: 1.5; }
 
 button {
-  background-color: #e983bb;
+  background-color: black;
   padding: 15px; }
-
-/* GALERIA */
-.galeria {
-  width: 200px;
-  display: flex;
-  flex-grow: 0; }
-  .galeria .galeria__imagen {
-    width: 300px;
-    justify-content: center;
-    padding: 20px; }
-  .galeria .galeria__imagen:hover {
-    height: 300px;
-    flex-grow: 5; }
 
 .recetas__grid {
   display: grid;
@@ -236,9 +294,7 @@ button {
   height: 50%;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas: "partida rellena ensalada"
- "partida avocado ensalada"
- "connueces frutas palta";
+  grid-template-areas: "partida rellena ensalada" "partida avocado ensalada" "connueces frutas palta";
   column-gap: 15px; }
 
 .partida {
