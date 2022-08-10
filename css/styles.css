@@ -203,6 +203,10 @@ a:hover {
   margin-bottom: auto;
   color: coral; }
 
+.img-fluid {
+  height: 50vh;
+  width: 50vw; }
+
 .tarjeta {
   display: flex;
   justify-content: center;

@@ -55,6 +55,11 @@ a:hover {
     color: $color-titulos;
 }
 
+.img-fluid {
+    height: 50vh;
+    width: 50vw;
+}
+
 
 .tarjeta {
     display: flex;
@@ -213,4 +218,5 @@ button{
     width: 30%;
     height: 30%;
 }
+
 
